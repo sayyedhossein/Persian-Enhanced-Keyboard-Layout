@@ -1,0 +1,79 @@
+// بسم الله الرحمن الرحیم
+
+// Persian enhanced keyboard layout
+
+////////////////////////////////////////
+// Persian enhanced keyboard layout
+// 
+// Last Updated: Mar 6, 2023
+//
+// Author: Sayyed Hossein <sayyedhossein.gh@gmail.com>
+//
+
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    name[Group1]= "Persian Enhanced Keyboard Layout";
+
+    include "ire(pel_basic)"
+
+    include "nbsp(zwnj2nb3nnb4)"
+    include "level3(ralt_switch)"
+};
+
+hidden partial alphanumeric_keys
+xkb_symbols "pel_basic" {
+
+    // Persian digits
+    key <AE01> { [ Farsi_1,	U200D,  	1,		Arabic_1    ] };
+    key <AE02> { [ Farsi_2,	at,		2,		Arabic_2    ] };
+    key <AE03> { [ Farsi_3,	numbersign,	3,		Arabic_3    ] };
+    key <AE04> { [ Farsi_4,	dollar,	        4,		Arabic_4    ] };
+    key <AE05> { [ Farsi_5,	percent,  	5,		Arabic_5    ] };
+    key <AE06> { [ Farsi_6,	asciicircum,    6,		Arabic_6    ] };
+    key <AE07> { [ Farsi_7,	multiply,  	7,		Arabic_7    ] };
+    key <AE08> { [ Farsi_8,	asterisk,	8,		Arabic_8    ] };
+    key <AE09> { [ Farsi_9,	parenright,	9,		Arabic_9    ] };
+    key <AE10> { [ Farsi_0,	parenleft,	0,		Arabic_0    ] };
+
+    // Persian letters and symbols
+    key <AD01> { [ Arabic_dad,		Arabic_fatha		                                                ] };
+    key <AD02> { [ Arabic_sad,		Arabic_kasra		                                                ] };
+    key <AD03> { [ Arabic_theh,		Arabic_damma		                                                ] };
+    key <AD04> { [ Arabic_qaf,		guillemotright,	        U203A,                  UFD3E                   ] };
+    key <AD05> { [ Arabic_feh,		guillemotleft,		U2039,                  UFD3F                   ] };
+    key <AD06> { [ Arabic_ghain,	quotedbl,		apostrophe                                      ] };
+    key <AD07> { [ Arabic_ain,		comma		                                                        ] };
+    key <AD08> { [ Arabic_heh,		U06C0,		        Arabic_heh_doachashmee                          ] };
+    key <AD09> { [ Arabic_khah,		bracketright,           U200F                                           ] };
+    key <AD10> { [ Arabic_hah,		bracketleft		                                                ] };
+    key <AD11> { [ Arabic_jeem,		braceright		                                                ] };
+    key <AD12> { [ Arabic_tcheh,	braceleft		                                                ] };
+
+    key <AC01> { [ Arabic_sheen,	Arabic_fathatan 	                                                ] };
+    key <AC02> { [ Arabic_seen,		Arabic_kasratan 	                                                ] };
+    key <AC03> { [ Farsi_yeh,		Arabic_dammatan,	Arabic_yeh              	                ] };
+    key <AC04> { [ Arabic_beh,		leftdoublequotemark,    leftsinglequotemark             	        ] };
+    key <AC05> { [ Arabic_lam,		rightdoublequotemark,   rightsinglequotemark      	                ] };
+    key <AC06> { [ Arabic_alef,		Arabic_maddaonalef,     Arabic_alefmaksura,     Arabic_superscript_alef ] };
+    key <AC07> { [ Arabic_teh,		rightcaret,	        Arabic_tehmarbuta               	        ] };
+    key <AC08> { [ Arabic_noon,		leftcaret,		U202A           	                        ] };
+    key <AC09> { [ Arabic_meem,		exclam,		        U202C           	                        ] };
+    key <AC10> { [ Arabic_keheh,	colon,			Arabic_kaf	                                ] };
+    key <AC11> { [ Arabic_gaf,		Arabic_semicolon                                                        ] };
+
+    key <AB01> { [ Arabic_zah,		Arabic_shadda		                                                ] };
+    key <AB02> { [ Arabic_tah,		Arabic_sukun		                                                ] };
+    key <AB03> { [ Arabic_zain,		Arabic_hamza_above		                                        ] };
+    key <AB04> { [ Arabic_ra,		bar		                                                        ] };
+    key <AB05> { [ Arabic_thal,		Arabic_hamzaonalef		                                        ] };
+    key <AB06> { [ Arabic_dal,		Arabic_hamzaunderalef		                                        ] };
+    key <AB07> { [ Arabic_hamzaonyeh,	Arabic_hamza		                                                ] };
+    key <AB08> { [ Arabic_waw,		Arabic_hamzaonwaw	                                                ] };
+    key <AB09> { [ period,		Arabic_comma		                                                ] };
+    key <AB10> { [ slash,		Arabic_question_mark		                                        ] };
+
+    key <TLDE> { [ Arabic_peh,		Arabic_tatweel,	        Arabic_percent                                  ] };
+    key <AE11> { [ minus,		underbar		          	                                ] };
+    key <AE12> { [ equal,		plus				                                        ] };
+    key <BKSL> { [ Arabic_jeh,		backslash                                                               ] };
+};
