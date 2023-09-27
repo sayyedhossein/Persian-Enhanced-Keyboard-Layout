@@ -1,4 +1,5 @@
-#a simple script for adding keyboard layout to Linux.
+#A simple script for safely adding the enhanced persian keyboard layout to Linux, without replacing eveldev.xml.
 
 sudo cp ./ire /usr/share/X11/xkb/symbols
 sudo sed -i.bkp "/\<layoutList\>/a \<layout\>\n\t\<configItem\>\n\t\<name\>ire\</name\>\n\t\<!-- Keyboard indicator for Persian layouts --\>\n\t\<shortDescription\>fa\</shortDescription\>\n\t\<description\>Persian (Enhanced Keyboard Layout)\</description\>\n\t\<countryList\>\n\t\<iso3166Id\>IR\</iso3166Id\>\n\t\</countryList\>\n\t\<languageList\>\n\t\<iso639Id\>fas\</iso639Id\>\n\t\</languageList\>\n\t\</configItem\>\n\t\<variantList\>\n\t\</variantList\>\n\</layout\>" /usr/share/X11/xkb/rules/evdev.xml
+echo "Done! Please add the Enhanced Persian Layout in the keyboard settings."
