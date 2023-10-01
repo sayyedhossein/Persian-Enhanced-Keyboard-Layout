@@ -1,5 +1,13 @@
-#A simple script for safely adding the enhanced persian keyboard layout to Linux, without replacing eveldev.xml.
+#A simple script for safely adding a keyboard layout to Linux, without replacing evdev.xml.
 
-sudo cp ./ire /usr/share/X11/xkb/symbols
-sudo sed -i.bkp "/\<layoutList\>/a \<layout\>\n\t\<configItem\>\n\t\<name\>ire\</name\>\n\t\<!-- Keyboard indicator for Persian layouts --\>\n\t\<shortDescription\>fa\</shortDescription\>\n\t\<description\>Persian (Enhanced Keyboard Layout)\</description\>\n\t\<countryList\>\n\t\<iso3166Id\>IR\</iso3166Id\>\n\t\</countryList\>\n\t\<languageList\>\n\t\<iso639Id\>fas\</iso639Id\>\n\t\</languageList\>\n\t\</configItem\>\n\t\<variantList\>\n\t\</variantList\>\n\</layout\>" /usr/share/X11/xkb/rules/evdev.xml
-echo "Done! Please add the Enhanced Persian Layout in the keyboard settings."
+#settings for Enhanced Persian layout
+name='ire'
+indicate='fa'
+descript='Persian (Enhanced Keyboard Layout)'
+country='IR'
+language='fas'
+comment='Keyboard indicator for Persian layouts'
+
+sudo cp ./$name /usr/share/X11/xkb/symbols
+sudo sed -i.bkp "/\<layoutList\>/a \<layout\>\n\t\<configItem\>\n\t\<name\>$name\</name\>\n\t\<!-- $comment --\>\n\t\<shortDescription\>$indicate\</shortDescription\>\n\t\<description\>$descript\</description\>\n\t\<countryList\>\n\t\<iso3166Id\>$country\</iso3166Id\>\n\t\</countryList\>\n\t\<languageList\>\n\t\<iso639Id\>$language\</iso639Id\>\n\t\</languageList\>\n\t\</configItem\>\n\t\<variantList\>\n\t\</variantList\>\n\</layout\>" /usr/share/X11/xkb/rules/evdev.xml
+echo "Done! Please select '$descript' in keyboard settings."
